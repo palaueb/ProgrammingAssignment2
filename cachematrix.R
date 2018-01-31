@@ -42,7 +42,7 @@ cacheSolve <- function(cacheMatrix, ...) {		## the ellipses (dot dot dot) is for
 		stop("The provided matrix is can not be inverted.")
 	}
 	
-	inverseMatrix <- solve(originalMatrixData)	## and calculate the inverse of the matrix
+	inverseMatrix <- solve(originalMatrixData, ...)	## and calculate the inverse of the matrix
 	cacheMatrix$setInverse(inverseMatrix) 		## then we save the calculated inverse onto the original object
 	#return(inverseMatrix) 				## and return out inverse Matrix. I preffer to use return(XX) to clarify the code
 }
